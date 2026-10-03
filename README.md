@@ -1,4 +1,4 @@
-# EduStress AI 🧠📊
+# EduStress AI
 
 **Classificação e Identificação de Fatores de Estresse em Estudantes com Aprendizado de Máquina**
 
@@ -10,7 +10,7 @@ Além da classificação, o projeto busca **identificar os fatores mais relevant
 
 ---
 
-## 🎯 Objetivos
+## Objetivos
 
 ### Objetivo geral
 
@@ -28,7 +28,7 @@ Desenvolver um modelo de aprendizado de máquina capaz de classificar o nível d
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 Fonte: [Student Stress Factors: A Comprehensive Analysis (Kaggle)](https://www.kaggle.com/datasets/rxnach/student-stress-factors-a-comprehensive-analysis).
 
@@ -60,7 +60,7 @@ A distribuição relativamente equilibrada entre as três classes permite a util
 
 ---
 
-## 🧩 Principais características utilizadas
+## Principais características utilizadas
 
 O dataset contém variáveis relacionadas a diferentes aspectos da vida estudantil.
 
@@ -83,7 +83,7 @@ As características são utilizadas pelo modelo para encontrar padrões associad
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 * **Python**
 * **Pandas**
@@ -104,7 +104,7 @@ Random Forest Classifier
 
 ---
 
-## 🔬 Metodologia
+## Metodologia
 
 O projeto foi organizado em etapas de preparação, treinamento, otimização e avaliação.
 
@@ -213,7 +213,7 @@ O melhor conjunto de parâmetros identificado foi:
 
 ---
 
-## 📈 Resultados
+## Resultados
 
 O modelo apresentou os seguintes resultados.
 
@@ -237,7 +237,7 @@ Isso significa que o modelo classificou corretamente aproximadamente **88,64% da
 
 ---
 
-## 📋 Métricas de classificação
+## Métricas de classificação
 
 O notebook também calcula:
 
@@ -256,7 +256,7 @@ classification_report(y_test, y_pred)
 
 ---
 
-## 🔲 Matriz de Confusão
+## Matriz de Confusão
 
 A matriz de confusão é utilizada para visualizar:
 
@@ -268,7 +268,7 @@ O notebook gera automaticamente a matriz de confusão utilizando `seaborn`.
 
 ---
 
-## 🔎 Identificação dos fatores mais relevantes
+## Identificação dos fatores mais relevantes
 
 Uma das etapas principais do **EduStress AI** é identificar quais características possuem maior importância para o modelo.
 
@@ -292,7 +292,7 @@ Esses valores representam a **importância das características para o funcionam
 
 ---
 
-## 📊 Visualizações
+## Visualizações
 
 As figuras abaixo são geradas a partir do notebook e estão na pasta [`figures/`](figures/).
 
@@ -310,7 +310,7 @@ As figuras abaixo são geradas a partir do notebook e estão na pasta [`figures/
 
 ---
 
-## 📂 Estrutura do repositório
+## Estrutura do repositório
 
 ```text
 .
@@ -329,14 +329,14 @@ As figuras abaixo são geradas a partir do notebook e estão na pasta [`figures/
 └── README.md
 ```
 
-## 📄 Documentação do Summit
+## Documentação do Summit
 
-* [Resumo simples – RCUMC](docs/Resumo_Simples_EduStress_AI.pdf)
-* [Banner – SUMMIT UMC 2026](docs/Banner_EduStress_AI.pdf)
+* [Resumo simples (RCUMC)](docs/Resumo_Simples_EduStress_AI.pdf)
+* [Banner do SUMMIT UMC 2026](docs/Banner_EduStress_AI.pdf)
 
 ---
 
-## ▶️ Como executar
+## Como executar
 
 ### Google Colab
 
@@ -361,7 +361,7 @@ jupyter notebook notebooks/EduStress_AI.ipynb
 
 ---
 
-## 📌 Limitações
+## Limitações
 
 O projeto apresenta algumas limitações que devem ser consideradas na interpretação dos resultados:
 
@@ -373,7 +373,7 @@ O projeto apresenta algumas limitações que devem ser consideradas na interpret
 
 ---
 
-## 📚 Conclusão
+## Conclusão
 
 O **EduStress AI** demonstrou a viabilidade da utilização de aprendizado de máquina para classificação de níveis de estresse em estudantes a partir das características disponíveis no dataset.
 
@@ -385,16 +385,16 @@ Dessa forma, o projeto combina **classificação supervisionada** e **análise d
 
 ---
 
-## 👨‍💻 Projeto
+## Projeto
 
 **EduStress AI**
 
 **Tema:** Classificação e Identificação de Fatores de Estresse em Estudantes com Aprendizado de Máquina.
 
-## 👥 Equipe
+## Equipe
 
 **Pesquisadores/Desenvolvedores:** Graziela Pereira de Oliveira, Gustavo Di Risio, Murilo Novaes de Oliveira, Rafael Souza Santana e Rayane da Luz Barbosa
 
 **Orientadora:** Profa. Alessandra da Silva Martins
 
-**Universidade de Mogi das Cruzes (UMC)** – SUMMIT UMC 2026 · Categoria Inovação
+**Universidade de Mogi das Cruzes (UMC)**, SUMMIT UMC 2026, categoria Inovação
