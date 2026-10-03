@@ -35,7 +35,7 @@ Fonte: [Student Stress Factors: A Comprehensive Analysis (Kaggle)](https://www.k
 O projeto utiliza o arquivo:
 
 ```text
-StressLevelDataset.csv
+data/StressLevelDataset.csv
 ```
 
 A base possui:
@@ -110,10 +110,11 @@ O projeto foi organizado em etapas de preparação, treinamento, otimização e 
 
 ### 1. Carregamento dos dados
 
-O arquivo `StressLevelDataset.csv` é carregado utilizando o Pandas:
+O arquivo `data/StressLevelDataset.csv` é carregado utilizando o Pandas. Se o notebook não encontrar o arquivo localmente (por exemplo, ao ser aberto direto no Google Colab), ele carrega a cópia publicada neste repositório:
 
 ```python
-df = pd.read_csv('StressLevelDataset.csv')
+fonte = next((str(c) for c in candidatos if c.exists()), DATA_URL)
+df = pd.read_csv(fonte)
 ```
 
 Também são verificadas as dimensões da base, tipos de dados e valores ausentes.
@@ -293,19 +294,19 @@ Esses valores representam a **importância das características para o funcionam
 
 ## 📊 Visualizações
 
-As figuras abaixo são geradas a partir do notebook e estão na pasta [`img/`](img/).
+As figuras abaixo são geradas a partir do notebook e estão na pasta [`figures/`](figures/).
 
 ### Distribuição dos níveis de estresse
 
-![Distribuição das classes](img/distribuicao_classes.png)
+![Distribuição das classes](figures/distribuicao_classes.png)
 
 ### Matriz de confusão (conjunto de teste)
 
-![Matriz de confusão](img/matriz_confusao.png)
+![Matriz de confusão](figures/matriz_confusao.png)
 
 ### Importância das características
 
-![Importância dos fatores](img/importancia_fatores.png)
+![Importância dos fatores](figures/importancia_fatores.png)
 
 ---
 
@@ -313,17 +314,25 @@ As figuras abaixo são geradas a partir do notebook e estão na pasta [`img/`](i
 
 ```text
 .
-├── EduStress_AI.ipynb        # Notebook completo (executado, com saídas)
-├── StressLevelDataset.csv    # Dataset utilizado
-├── requirements.txt          # Dependências
-├── img/                      # Gráficos gerados
-└── doc/                      # Resumo simples (RCUMC) e banner do Summit
+├── data/
+│   └── StressLevelDataset.csv        # Dataset utilizado (Kaggle)
+├── notebooks/
+│   └── EduStress_AI.ipynb            # Notebook completo (executado, com saídas)
+├── figures/                          # Gráficos usados no README e no banner
+│   ├── distribuicao_classes.png
+│   ├── importancia_fatores.png
+│   └── matriz_confusao.png
+├── docs/                             # Documentação do SUMMIT UMC 2026
+│   ├── Resumo_Simples_EduStress_AI.pdf
+│   └── Banner_EduStress_AI.pdf
+├── requirements.txt                  # Dependências
+└── README.md
 ```
 
 ## 📄 Documentação do Summit
 
-* [Resumo simples – RCUMC](doc/Resumo_Simples_EduStress_AI.pdf)
-* [Banner – SUMMIT UMC 2026](doc/Banner_EduStress_AI.pdf)
+* [Resumo simples – RCUMC](docs/Resumo_Simples_EduStress_AI.pdf)
+* [Banner – SUMMIT UMC 2026](docs/Banner_EduStress_AI.pdf)
 
 ---
 
@@ -331,16 +340,10 @@ As figuras abaixo são geradas a partir do notebook e estão na pasta [`img/`](i
 
 ### Google Colab
 
-1. Acesse o Google Colab ou abra diretamente: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rayanelbarbosa/EduStress_AI/blob/main/EduStress_AI.ipynb)
-2. Se preferir, faça upload do arquivo `EduStress_AI.ipynb`.
-3. Faça upload do arquivo `StressLevelDataset.csv`.
-4. Execute as células sequencialmente.
+1. Abra o notebook direto no Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/rayanelbarbosa/EduStress_AI/blob/main/notebooks/EduStress_AI.ipynb)
+2. Execute as células sequencialmente (**Ambiente de execução → Executar tudo**).
 
-O dataset deve estar no mesmo diretório utilizado pelo notebook para que o seguinte comando funcione:
-
-```python
-df = pd.read_csv('StressLevelDataset.csv')
-```
+Não é necessário enviar o dataset: o notebook baixa automaticamente `data/StressLevelDataset.csv` deste repositório.
 
 ### Execução local
 
@@ -353,7 +356,7 @@ pip install -r requirements.txt
 Depois execute:
 
 ```bash
-jupyter notebook EduStress_AI.ipynb
+jupyter notebook notebooks/EduStress_AI.ipynb
 ```
 
 ---
